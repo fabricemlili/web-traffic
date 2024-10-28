@@ -17,7 +17,7 @@ NOTHING
 | zookeeper | zookeeper | 3.6.1 | 172.25.0.11:2181 |
 | kafka1 | wurstmeister/kafka | 2.12-2.2.0 | 172.25.0.12:9092 |
 | kafka2 | wurstmeister/kafka | 2.12-2.2.0 | 172.25.0.13:9092 |
-| spark | gettyimages/spark | 3.5.0 | 172.25.0.14 |
+| spark | gettyimages/spark | 3.5.0 | 172.25.0.14:8080 |
 | postgres | postgres | 13 | 172.25.0.15 |
 
 _Note: Kafka 1 is intended to be used as the publisher and Kafka 2 is intended to be used as the consumer_
