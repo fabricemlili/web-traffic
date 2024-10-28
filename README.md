@@ -64,11 +64,7 @@ pip install psycopg2-binary
 spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 --jars kafka-clients-3.8.0.jar --driver-class-path kafka-clients-3.8.0.jar processing/spark_consumer.py
 ```
 
-#### 6) (Optional) Connect to PostgreSQL to view data.
-```bash
-sudo docker compose exec postgres psql -U user -d web_traffic_db
-```
-#### 7) Run data analyse by opening a bash in the spark docker container.
+#### 6) Run data analyse by opening a bash in the spark docker container.
 Open a new window in your terminal and enter :
 ```bash
 sudo docker compose exec spark bash
@@ -76,6 +72,12 @@ sudo docker compose exec spark bash
 Then:
 ```bash
 spark-submit --jars postgresql-42.2.23.jar analysis/analyser.py
+```
+
+## Optional Steps
+If you wish to view the data in PostgreSQL, you can connect using the following command:
+```bash
+sudo docker compose exec postgres psql -U user -d web_traffic_db
 ```
 
 ## Additional Code Snippets
