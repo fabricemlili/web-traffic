@@ -25,22 +25,22 @@ _Note: Kafka 1 is intended to be used as the publisher and Kafka 2 is intended t
 ## Get Started
 To use the script, follow these steps:
 
-###### 1) Clone the repository or download the script.
+#### 1) Clone the repository or download the script.
 ```bash
 git clone https://github.com/fabricemlili/web-traffic.git
 ```
 
-###### 2) Navigate to the script's directory.
+#### 2) Navigate to the script's directory.
 ```bash
 cd web-traffic
 ```
 
-###### 3) Use Docker Compose to run kafka and spark.
+#### 3) Use Docker Compose to run kafka and spark.
 ```bash
 sudo docker compose up -d
 ```
 
-###### 4) Start data production by opening a bash in the spark docker container.
+#### 4) Start data production by opening a bash in the spark docker container.
 Open a new window in your terminal and enter :
 ```bash
 sudo docker compose exec spark bash
@@ -52,7 +52,7 @@ pip install kafka-python
 python streaming/kafka_producer.py
 ```
 
-###### 5) Start data consumption by opening a bash in the spark docker container.
+#### 5) Start data consumption by opening a bash in the spark docker container.
 Open a new window in your terminal and enter :
 ```bash
 sudo docker compose exec spark bash
@@ -64,11 +64,11 @@ pip install psycopg2-binary
 spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 --jars kafka-clients-3.8.0.jar --driver-class-path kafka-clients-3.8.0.jar processing/spark_consumer.py
 ```
 
-###### 6) (Optional) Connect to PostgreSQL to view data.
+#### 6) (Optional) Connect to PostgreSQL to view data.
 ```bash
 sudo docker compose exec postgres psql -U user -d web_traffic_db
 ```
-###### 7) Data analyse.
+#### 7) Data analyse.
 Open a new window in your terminal and enter :
 ```bash
 sudo docker compose exec spark bash
