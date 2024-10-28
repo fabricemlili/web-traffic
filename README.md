@@ -80,9 +80,6 @@ spark-submit --jars postgresql-42.2.23.jar analysis/analyser.py
 
 ## Additional Code Snippets
 ```bash
-pip install git+https://github.com/dpkp/kafka-python.git
-pip install pyspark
-
 sudo docker rm -f $(sudo docker ps -a -q)
 sudo docker compose down
 sudo docker compose up -d
