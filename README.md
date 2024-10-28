@@ -35,7 +35,7 @@ git clone https://github.com/fabricemlili/web-traffic.git
 cd web-traffic
 ```
 
-#### 3) Use Docker Compose to run kafka and spark.
+#### 3) Use Docker Compose to run kafka, spark and postgresql containers.
 ```bash
 sudo docker compose up -d
 ```
@@ -68,7 +68,7 @@ spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 --jars 
 ```bash
 sudo docker compose exec postgres psql -U user -d web_traffic_db
 ```
-#### 7) Data analyse.
+#### 7) Run data analyse by opening a bash in the spark docker container.
 Open a new window in your terminal and enter :
 ```bash
 sudo docker compose exec spark bash
